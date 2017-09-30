@@ -70,6 +70,8 @@
         offset: [0, -50]
       });
       map.addOverlay(popup);
+      
+      var vFeature;
 
       // display popup on click
       map.on('click', function(evt) {
@@ -78,15 +80,12 @@
               return feature;
             });
         if (feature) {
+          vFeature = feature;
           $(element).popover('destroy');
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
-          $(element).popover({
-            'placement': 'top',
-            'html': true,
-            'content': feature.get('name')
-          });
-          $(element).popover('show');
+          //setPopupContent(feature);
+          setTimeout("setPopupContent(vFeature)",200);
           console.log("Click: "+feature.get('name'));
           //alert(document.getElementById("popup").innerHTML)
         } else {
@@ -94,6 +93,16 @@
  	      popup.setPosition(undefined);
         }
       });
+	
+	function setPopupContent(feature) {
+		$(element).popover({
+            'placement': 'top',
+            'html': true,
+            'content': feature.get('name')
+          });
+          //alert("Test1");
+          $(element).popover('show');          
+	}
 
       // change mouse cursor when over marker
       map.on('pointermove', function(e) {
