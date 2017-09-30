@@ -1,6 +1,8 @@
 # Open Layers: Diplay Markers/Icons on Map
 The repository contains derivative work of the OpenLayers Example  that is able to display a set of icons on a map. The set of georeferrenced icons can be generated with openlayers_selectgeolocation.
 
+[Demo Markers Display](https://github.com/niebert/openlayer_display_markers)
+
 ## Derivative Works of OpenLayers: Icon Symbolizer
 The repository is based on the [OpenLayers example](http://openlayers.org/en/latest/examples/icon.html)
 

@@ -78,6 +78,7 @@
               return feature;
             });
         if (feature) {
+          $(element).popover('destroy');
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
           $(element).popover({
@@ -87,8 +88,10 @@
           });
           $(element).popover('show');
           console.log("Click: "+feature.get('name'));
+          //alert(document.getElementById("popup").innerHTML)
         } else {
           $(element).popover('destroy');
+ 	      popup.setPosition(undefined);
         }
       });
 
