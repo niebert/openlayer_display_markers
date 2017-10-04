@@ -82,6 +82,7 @@
         if (feature) {
           vFeature = feature;
           $(element).popover('destroy');
+          popup.setPosition(undefined);
           var coordinates = feature.getGeometry().getCoordinates();
           popup.setPosition(coordinates);
           //setPopupContent(feature);
