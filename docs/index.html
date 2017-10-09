@@ -11,7 +11,7 @@
       button {background-color:#42c5f4}
    </style>
 </head>
-<body>
+<body  bgcolor="#f2f2f2">
    <h3>Display Markers with Geolocation and Popup with OpenLayers and Callback URL</h3>
    <p>This is an example consists of two files.
    <ul>
@@ -38,7 +38,7 @@
          <b>Map Center:</b><input type="string" name="mapcenter" id="mymapcenter" size="80" value="-1.81185, 52.443141">
          <b>Zoom:</b> <input type="string" name="zoom" id="myzoom" size="6">
          <b>JSON Data for Icons:</b> <br/>
-         <textarea rows="12"  style="width:100%;" id="myjsondata">[
+         <textarea rows="12"  style="width:100%;" name="jsondata" id="myjsondata">[
         
 	{
         geolocation : [-0.14467470703124907,51.493889053694915],
@@ -50,9 +50,7 @@
     }
 ]
       	</textarea>
-      	<hr>
       </form>
-      <hr>
    </div>
    <!-- The following script reads link parameters and sets the parameters if "viewicons.html" return one -->
    <script>
