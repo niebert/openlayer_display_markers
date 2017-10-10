@@ -28,13 +28,16 @@
       // Callback performed with LinkParameter mapcenter
       // e.g. index.html?geolocation=-12.213,65.123
       //el("mymapcenter").value = vLinkParam.getValue("mapcenter");
-      vMapCenter = getGeolocArray4String(vLinkParam.getValue("mapcenter"), vMapCenter);
+      var mc = vLinkParam.getValue("mapcenter");
+      console.log("mapcenter='"+mc+"'");
+      vMapCenter = getGeolocArray4String(mc, vMapCenter);
   };
   if (vLinkParam.exists("zoom")) {
       // Callback performed with LinkParameter zoom
       // e.g. index.html?zoom=12
       var s = vLinkParam.getValue("zoom");
-      var num = parseInt(s) || 4; //default zoom is 4
+      console.log("zoom='"+s+"'");
+      vZoom = parseInt(s) || 4; //default zoom is 4
   };
   if (vLinkParam.exists("jsondata")) {
       // Callback performed with LinkParameter jsondata
