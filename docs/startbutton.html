@@ -12,36 +12,15 @@
    </style>
 </head>
 <body  bgcolor="#f2f2f2">
-   <h3>Display Markers with Geolocation and Popup with OpenLayers</h3>
-   <p>This is an example consists of two files.
-   <ul>
-      <li>
-         <tt>index.html</tt> (this file)
-      </li>
-      <li>
-         <tt><a href="startbutton.html">startbutton.html</a></tt> uses the same marker data as index but shows just the start button.
-      </li>
-      <li>
-         <tt><a href="startbutton.html">viewicons.html</a> (loads the icon with default icon data)</tt>
-      </li>
-   </ul>
-   This file <tt>index.html</tt> calls <tt>viewicons.html</tt> lets the user select a geolocation and <tt>selectlocation.html</tt>
-   returns the selected geolocation back to index.html if the user clicks on a the Map.
-   Press submit button "Select Geolocation" and look at your browser location (<a href="https://github.com/niebert/openlayer_selectlocation/archive/master.zip" target="_blank">Download Demo</a>).
-   <hr>
    <!-- next DIV element implements the main CallBack Structure -->
    <div style="margins:30px">
-      <b>Call <i>viewicons.html</i> with a HTML form:</b>
       <form id="mapviewer" action="viewicons.html" method="GET">
          <!-- Callback URL: <input type="string" name="callback" value="index.html">  -->
          <button type="submit">
     	     <i class="fa fa-globe" aria-hidden="true"></i> View Icons on Map
          </button>
-         <hr>
-         <b>Map Center:</b><input type="string" name="mapcenter" id="mymapcenter" size="80" value="-1.81185, 52.443141">
-         <b>Zoom:</b> <input type="string" name="zoom" id="myzoom" size="3" value="6s">
-         <hr/>
-         <b>JSON Data for Icons:</b> <br/>
+         <input type="string" name="mapcenter" id="mymapcenter" size="80" value="-1.81185, 52.443141">
+         <input type="string" name="zoom" id="myzoom" size="3" value="5">
          <textarea rows="12"  style="width:100%;" name="jsondata" id="myjsondata">[
     {
         "geolocation": [
@@ -60,7 +39,6 @@
 ]
       	</textarea>
       </form>
-   </div>
    <!-- The following script reads link parameters and sets the parameters if "viewicons.html" return one -->
    <script>
       function el(id) {
@@ -87,8 +65,5 @@
       	el("myjsondata").value = vLinkParam.getValue("jsondata");
       };
    </script>
-   <hr>
-   <b>GitHub:</b> View <a href="https://github.com/niebert/openlayer_display_markers" target="_blank">repository on GitHub</a>
-   <hr>
 </body>
 </html>
