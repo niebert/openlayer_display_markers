@@ -37,16 +37,22 @@
          <hr>
          <b>Map Center:</b><input type="string" name="mapcenter" id="mymapcenter" size="80" value="-1.81185, 52.443141">
          <b>Zoom:</b> <input type="string" name="zoom" id="myzoom" size="6">
+         <hr/>
          <b>JSON Data for Icons:</b> <br/>
          <textarea rows="12"  style="width:100%;" name="jsondata" id="myjsondata">[
-        
-	{
-        geolocation : [-0.14467470703124907,51.493889053694915],
-        name : 'The City of London <a href="https://en.wikipedia.org/wiki/London" target="_blank">Link to Wikipedia</a>',
+    {
+        "geolocation": [
+            -0.14467470703124907,
+            51.493889053694915
+        ],
+        "name": "The City of London <a href=\"https://en.wikipedia.org/wiki/London\" target=\"_blank\">Link to Wikipedia</a>"
     },
     {
-        geolocation : [-1.81185, 51.243141],
-        name : 'Wikipedia Link to <a href="https://en.wikipedia.org/wiki/Birmingham" target="_blank">Birmingham</a>',
+        "geolocation": [
+            -1.81185,
+            51.243141
+        ],
+        "name": "Wikipedia Link to <a href=\"https://en.wikipedia.org/wiki/Birmingham\" target=\"_blank\">Birmingham</a>"
     }
 ]
       	</textarea>
@@ -60,21 +66,21 @@
       //---- Evaluate Link Paramaters ----
       var vLinkParam = new LinkParam();
       vLinkParam.init(document);
-      
+
       // load geoloaction from LinkParameter if available
       if (vLinkParam.exists("mapcenter")) {
-      	// Callback performed with LinkParameter mapcenter 
+      	// Callback performed with LinkParameter mapcenter
         // e.g. index.html?geolocation=-12.213,65.123
       	el("mymapcenter").value = vLinkParam.getValue("mapcenter");
       };
       if (vLinkParam.exists("zoom")) {
       	// Callback performed with LinkParameter zoom
-        // e.g. index.html?zoom=12 
+        // e.g. index.html?zoom=12
       	el("myzoom").value = vLinkParam.getValue("zoom");
       };
       if (vLinkParam.exists("jsondata")) {
       	// Callback performed with LinkParameter jsondata
-        // e.g. index.html?zoom=12 
+        // e.g. index.html?zoom=12
       	el("myjsondata").value = vLinkParam.getValue("jsondata");
       };
    </script>
@@ -83,4 +89,3 @@
    <hr>
 </body>
 </html>
-

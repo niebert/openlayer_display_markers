@@ -25,26 +25,27 @@
 
   // load geoloaction from LinkParameter if available
   if (vLinkParam.exists("mapcenter")) {
-      // Callback performed with LinkParameter mapcenter 
+      // Callback performed with LinkParameter mapcenter
       // e.g. index.html?geolocation=-12.213,65.123
       //el("mymapcenter").value = vLinkParam.getValue("mapcenter");
-      vMapCenter = getGeolocArray4String(LinkParam.getValue("mapcenter"), vMapCenter);
+      vMapCenter = getGeolocArray4String(vLinkParam.getValue("mapcenter"), vMapCenter);
   };
   if (vLinkParam.exists("zoom")) {
       // Callback performed with LinkParameter zoom
-      // e.g. index.html?zoom=12 
+      // e.g. index.html?zoom=12
       var s = vLinkParam.getValue("zoom");
       var num = parseInt(s) || 4; //default zoom is 4
   };
   if (vLinkParam.exists("jsondata")) {
       // Callback performed with LinkParameter jsondata
-      // e.g. index.html?jsondata=[....] 
+      // e.g. index.html?jsondata=[....]
       // el("myjsondata").value = vLinkParam.getValue("jsondata");
       var vStrJSON = vLinkParam.getValue("jsondata");
       var arr = vIconArray;
-      if (response) {
-          try {
-              arr = JSON.parse(response);
+      if (vStrJSON) {
+        console.log("try to parse 'jsondata' string into JSON");
+        try {
+              arr = JSON.parse(vStrJSON);
           } catch (e) {
               alert(e); // error in the above string (in this case, yes)!
           };

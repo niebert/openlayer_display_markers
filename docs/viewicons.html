@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/linkparam.js"></script>
+    <script src="js/locationselect.js"></script>
     <style>
       #map {
         position: relative;
@@ -21,25 +23,26 @@
        // Map Defaults
       var vMapCenter = [-1.81185, 52.443141];
       var vZoom = 6;
-      
+
       var vIconURL = 'https://openlayers.org/en/v4.3.1/examples/data/icon.png';
  	</script>
- 	<script>     
+ 	<script>
       var vIconArray = [
-        
+
         {
           geolocation : [-0.14467470703124907,51.493889053694915],
-          name : 'The City of London <a href="https://en.wikipedia.org/wiki/London" target="_blank">Link to Wikipedia</a>',
+          name : 'The City of London <a href="https://en.wikipedia.org/wiki/London" target="_blank">Link to Wikipedia</a>'
         },
         {
           geolocation : [-1.81185, 51.243141],
-          name : 'Wikipedia Link to <a href="https://en.wikipedia.org/wiki/Birmingham" target="_blank">Birmingham</a>',
+          name : 'Wikipedia Link to <a href="https://en.wikipedia.org/wiki/Birmingham" target="_blank">Birmingham</a>'
         }
       ];
+      //alert(JSON.stringify(vIconArray,null,4));
     </script>
     <script src="js/readparam.js"></script>
- 	
+
     <script src="js/iconprocessing.js"></script>
-    
+
   </body>
 </html>
