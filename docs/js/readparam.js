@@ -29,8 +29,13 @@
       // e.g. index.html?geolocation=-12.213,65.123
       //el("mymapcenter").value = vLinkParam.getValue("mapcenter");
       var mc = vLinkParam.getValue("mapcenter");
+      mc = mc.replace(/[^0-9\-\.,]/g,"");
       console.log("mapcenter='"+mc+"'");
-      vMapCenter = getGeolocArray4String(mc, vMapCenter);
+      if (mc.indexOf(",")>0) {
+        vMapCenter = getGeolocArray4String(mc, vMapCenter);
+      } else {
+        console.log("Error in MapCenter Parameter!");
+      };
   };
   if (vLinkParam.exists("zoom")) {
       // Callback performed with LinkParameter zoom
