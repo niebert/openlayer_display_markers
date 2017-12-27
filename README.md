@@ -17,4 +17,5 @@ This library allows to submit the marker data via URL parameter. Furthermore you
 
 ### Demo
 * [Geolocation Select Demo](https://niebert.github.io/openlayer_display_markers)
-* [Download Demo](https://github.com/niebert/openlayer_selectlocation/archive/master.zip) unzip file and checkout the subdirectory ___/docs___. The demo is stored in ___/docs___ because it is used at the same time as root directory for https://niebert.github.io/openlayer_selectlocation
+* [Download Display Markers Demo](https://github.com/niebert/openlayer_display_markers/archive/master.zip) unzip file and checkout the subdirectory `/docs`. The demo is stored in `/docs` because it is used at the same time as root directory for https://niebert.github.io/openlayer_display_markers
+* [Download Select Location Demo](https://github.com/niebert/openlayer_selectlocation/archive/master.zip) unzip file and checkout the subdirectory `/docs`. The demo is stored in `/docs` because it is used at the same time as root directory for https://niebert.github.io/openlayer_selectlocation
