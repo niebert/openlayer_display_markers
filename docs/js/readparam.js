@@ -61,4 +61,6 @@
           	vIconArray = arr;
           };
       }
+  } else {
+  	  console.log("WARNING: No JSON in 'jsondata' parameter. Use Default Icon Array!\n"+JSON.stringify(vIconArray,null,4))
   };
