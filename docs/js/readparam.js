@@ -49,6 +49,7 @@
       // e.g. index.html?jsondata=[....]
       // el("myjsondata").value = vLinkParam.getValue("jsondata");
       var vStrJSON = vLinkParam.getValue("jsondata");
+      vStrJSON = decodeURIComponent(vStrJSON);
       var arr = vIconArray;
       if (vStrJSON) {
         console.log("try to parse 'jsondata' string into JSON");
